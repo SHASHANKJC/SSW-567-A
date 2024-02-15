@@ -12,8 +12,11 @@ import json
 def get_user_repositories(user_id):
     """
     Prints the the user's repositories and commits in each repository. 
-    If the response status code is not 200, an error message is displayed. Else, 
-    each repository and number of commits is displayed on a single line. 
+    If the response status code when fetching the user's repositories
+    is not 200, an error message is displayed. Else, iterate through each
+    repository. If the response status code when fetching the user's 
+    repository's commits is not 200, an error message is displayed. Else, 
+    the repository and number of commits is displayed on a single line.
     Args:
         user_id: string value of the user's GitHub ID
     Returns:
